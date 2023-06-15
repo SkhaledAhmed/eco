@@ -1,0 +1,329 @@
+@font-face
+{
+  font-family:"ElMessiri";
+  src:url(../font/ElMessiri-Regular.ttf);
+  font-weight: 200;
+}
+@font-face
+{
+  font-family:"ElMessiri";
+  src:url(../font/ElMessiri-Medium.ttf);
+  font-weight: 300;
+}
+@font-face
+{
+  font-family:"ElMessiri";
+  src:url(../font/ElMessiri-SemiBold.ttf);
+  font-weight: 400;
+}
+@font-face
+{
+  font-family:"ElMessiri";
+  src:url(../font/ElMessiri-Bold.ttf);
+  font-weight: 700;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:#eeeeee;
+}
+
+html
+{
+  font-size: 14px;
+}
+:root
+{
+  --bg-text-size:2.2rem;
+  --md-text-size:1.8rem;
+  --sm-text-size:1.3rem;
+  --xs-text-size:1.1rem;
+
+  --danger-color:#f1536e;
+  --success-color:#00c689;
+  --warning-color:#fda006;
+  --info-color:#3da5f4;
+
+  --primary-text-color:#ffffff;
+  --secondery-text-color:#797e95;
+
+  --black-text-color:#000000;
+  --grey-text-color:#9b9b9b;
+
+  --primary-background:#2c2e3e;
+  --secondery-background:#eeeeee;
+
+  --card-background:#ffffff;
+
+}
+.bg-danger
+{
+  background-color: var(--danger-color);
+}
+.bg-success
+{
+  background-color: var(--success-color);
+}
+.bg-warning
+{
+  background-color: var(--warning-color);
+}
+body
+{
+  direction: rtl;
+  font-size: 1rem;
+  font-family: "ElMessiri", sans-serif;
+  font-weight: initial;
+  line-height: normal;
+}
+
+.container
+{
+  border:1px solid red;
+  max-width:1536px;
+  margin-right:auto;
+  margin-left:auto;
+  padding-right:0.5rem;
+  padding-left:0.5rem;
+}
+
+.body
+{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+
+/*================ Side Bar  ==================*/
+.body .sidebar
+{
+  min-height:100vh;
+  background-color: var(--primary-background);
+  grid-column: 1 / 3;
+}
+.body .sidebar .brand
+{ 
+  font-size: var(--md-text-size);
+  text-align: center;
+  background-color: red;
+  padding: 40px 0;
+}
+
+.body .sidebar .link
+{
+  display: flex;
+  font-size: var(--sm-text-size);
+  padding:10px 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+}
+.body .sidebar .link:last-child
+{
+  margin-top: 50px;
+}
+
+.body .sidebar .link:hover
+{
+  background-color:#0f1531;
+}
+.body .sidebar .link a
+{
+  text-decoration: none;
+}
+.body .sidebar .link i
+{
+  margin:5px 5px;
+}
+
+
+/*================ Main  ==================*/
+.body .main
+{
+  background-color: var(--secondery-background);
+  grid-column: 3 / 13;
+}
+.body .main .container
+{
+  width:98%;
+  margin:0 auto;
+}
+.body .main .top
+{
+  height: 50px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+}
+.body .main .top .container
+{
+  border:none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: var(--sm-text-size);
+  
+}
+.body .main .top i
+{
+  color:var(--primary-background);
+  margin-left:10px;
+  margin-bottom: 10px;
+}
+.body .main .top h3
+{
+  color:var(--primary-background);
+
+}
+.body .main .cards
+{
+   width:calc(100% - 36px);
+  height: 300px;
+  margin: 20px;
+  
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:4px;
+}
+.body .main .card
+{
+  background-color: #fff;
+  background-clip: border-box;
+  height:100px;
+  border:1px solid #d2d2dc;
+  border-radius: 2px;
+}
+
+.body .main .card .card-title
+{
+  width:100%;
+  border-bottom: 1px solid #d2d2dc;
+  padding:10px;
+}
+
+.body .main .card .card-content p
+{
+  max-width: 100%;
+  overflow-wrap: wrap;
+  font-size: var(--sm-text-size);
+  text-align: center;
+  line-height: 3;
+}
+
+
+
+
+/*========= LG ===========*/
+@media (max-width:1025px)
+{
+  .container
+  {border:1px solid rgb(121, 17, 57);
+    max-width:1024px;
+  }
+}
+
+
+/*========= XL ===========*/
+@media (max-width:1281px)
+{
+  .container
+  {border:1px solid rgb(140, 0, 255);
+    max-width:1024px;
+  }
+}
+
+
+
+
+
+
+
+/*========= XXL ===========*/
+@media (max-width:1537px)
+{
+  .container
+  {border:1px solid rgb(149, 219, 19);
+    max-width:1280px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========= MD ===========*/
+@media (max-width:769px)
+{
+  .container
+  {border:1px solid rgb(83, 141, 6);
+    max-width:640px;
+  }
+}
+
+
+/*========= SM ===========*/
+@media (max-width:641px)
+{
+  .container
+  {border:1px solid rgb(233, 141, 2);
+    max-width:475px;
+  }
+}
+
+
+/*========= XS ===========*/
+@media (max-width:476px)
+{
+  .container
+  {border:1px solid rgb(100, 37, 87);
+    width:100%;
+  }
+}
+
+
+
+
+
+
+
